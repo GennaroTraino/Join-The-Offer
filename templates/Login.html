@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Join The Offer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href='style.css'>
+    <script src='main.js'></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+<body class="bodysign">
+  <style>
+    /* Button Style Material 2.0 */
+    .material2 {border-radius: 25px; background-color: #73103C; color: #eee;}
+    /* On mouse-over */
+    .material2:hover {background: #eee;} 
+    /* Body */
+    .bodysign {background-color: #73103C;}
+  </style>
+
+  
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" style="background-color: #73103C"> <!-- Puoi cambiare con classe pink-->
+      <a class="navbar-brand" href="#"><strong>Join The Offer</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item" href="#contact">
+            <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i>Contact us</a>
+          </li>
+          <li class="nav-item" href="#about">
+            <a class="nav-link" href="#about"><i class="fas fa-info-circle" ></i>About</a>
+          </li>
+        </ul>
+    <!--Searchbar-->
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Search form -->
+        <form style="margin-left: 25%" class="form-inline mr-auto">
+          <div class="md-form my-0 form-sm md-outline">
+            <!-- Search form -->
+            <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search"> 
+            <button class="btn btn-sm" type="submit" style="border-radius: 25px;" ><i class="fas fa-search" style="color:#eee;"></i></button>
+          </div>
+        </form>
+  </div>
+      <!-- Collapsible content -->
+
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item dropdown">
+            <a id="insta" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"><i class="fas fa-user"></i>
+                Profile
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                    <a class="dropdown-item" href="#">Log In</a>
+                    <a class="dropdown-item" href="/signup">Sign Up</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  </header>
+  <!--Main Navigation-->
+
+
+
+<!-- Form login -->
+<form action = "/loginexec" method="POST" class="text-center border border-light p-5" style=" border-radius: 25px; margin-right: 30%; margin-left: 30%; margin-top: 200px; background-color:rgb(255, 255, 255);">
+  <p class="h3 mb-4">Login</p>
+  <!-- Username -->
+   <div class="md-form md-outline form-lg" style="background-color: white;">
+     <input type="text" id="username" name="username" class="form-control form-control-lg validate">
+     <label for="username" data-error="wrong" data-success="right">Username</label>
+   </div>
+  <!-- Password -->
+   <div class="md-form md-outline form-lg" style="background-color: white;">
+     <input type="password" id="password" name="password" class="form-control form-control-lg validate">
+     <label for="password" data-error="wrong" data-success="right">Password</label>
+   </div>
+  <!-- Login button -->
+   <button class="material2 btn btn-block my-4" type="submit" value="submit" style="margin: 0%;">Login</button>
+  <!-- Register -->
+   <p>Not a member?
+     <a href="/signup">Register</a>
+   </p>
+</form>
+<!-- Default form login -->
+
+<!--About Join The Offer-->
+<div class="card" style="border-radius: 25px; margin-top: 300px;  margin-right: 25px; margin-left: 25px;">
+  <div name="about" class="card-body">
+    <p id="about" class="h3 mb-4">About Join The Offer</p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+      Vel aliquam odio sit maiores numquam ea iusto accusamus cupiditate incidunt itaque amet earum,<br> 
+      consequuntur dolor odit molestias doloremque harum corporis temporibus.<br><br>
+    <p class="h5 mb-4">Come funziona</p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+      Vel aliquam odio sit maiores numquam ea iusto accusamus cupiditate incidunt itaque amet earum,<br> 
+      consequuntur dolor odit molestias doloremque harum corporis temporibus.<br><br>
+    <p class="h5 mb-4">Garanzia</p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+      Vel aliquam odio sit maiores numquam ea iusto accusamus cupiditate incidunt itaque amet earum,<br> 
+      consequuntur dolor odit molestias doloremque harum corporis temporibus.<br><br><br><br>
+  </div>
+</div>
+
+<div class="card" style="border-radius: 25px; margin-top: 50px; margin-right: 25px; margin-left: 25px;">
+    <div name="contact" class="card-body">
+      <p id="contact" class="h3 mb-4">Contact us</p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+      Vel aliquam odio sit maiores numquam ea iusto accusamus cupiditate incidunt itaque amet earum,<br> 
+      consequuntur dolor odit molestias doloremque harum corporis temporibus.<br><br>
+    </div>
+</div>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/js/mdb.min.js"></script>
+</body>
+</html>

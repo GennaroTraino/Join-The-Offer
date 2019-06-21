@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Join The Offer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href='style.css'>
+    <script src='main.js'></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <style>
+    /* Button Style Material 2.0 */
+    .material2 {border-radius: 25px; background-color: #73103C; color: #eee}
+    /* On mouse-over */
+    .material2:hover {background: #eee;}
+
+    /* Button Style 2 Material 2.0 */
+    .material3 {border-radius: 25px; background-color: rgb(9, 134, 76); color: #eee}
+    /* On mouse-over */
+    .material3:hover {background: #eee;} 
+  </style>
+
+  
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" style="background-color: #73103C"> <!-- Puoi cambiare con classe pink-->
+      <a class="navbar-brand" href="/"><strong>Join The Offer</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-eye"></i>Categorie
+            </a>
+            <div class="dropdown-menu dropdown-info" role="button" aria-labelledby="navbarDropdown" style="margin-left: 7%">
+                <a class="dropdown-item" href="/categoria/tecnologia">Tecnologia</a>
+                <a class="dropdown-item" href="/categoria/casa">Casa</a>
+                <a class="dropdown-item" href="/categoria/fitness">Fitness</a>
+                <a class="dropdown-item" href="/categoria/abbigliamento">Abbigliamento</a>
+                <a class="dropdown-item" href="/categoria/auto">Auto</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Secondo i miei interessi</a>
+            </div>                
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+    <!--Searchbar-->
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <!-- Search form -->
+    <form style="margin-left: 25%" class="form-inline mr-auto" action="/ricerca" method="POST" >
+      <div class="md-form my-0 form-sm md-outline">
+        <!-- Search form -->
+        <input class="form-control form-control-sm" id="testo" name="testo" type="text" placeholder="Search" aria-label="Search"> 
+        <button class="btn btn-sm" type="submit" value="submit" style="border-radius: 25px; border-color: #eee;" ><i class="fas fa-search" style="color:#eee;"></i></button>
+      </div>
+    </form>
+</div>
+      <!-- Collapsible content -->
+
+      
+
+  <ul class="navbar-nav nav-flex-icons">
+    <li class="nav-item">
+      <a href="/myaccount" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+    </li>
+    <li class="nav-item dropdown">
+      <a id="insta" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"><i class="fas fa-user"></i>
+        {{ username }}
+      </a>
+      <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+        <a class="dropdown-item" href="/myaccount">My account</a>
+        <a class="dropdown-item" href="/logout">Log out</a>
+      </div>
+    </li>
+  </ul>
+      </div>
+  </nav>
+  
+</header>
+<!--Main Navigation-->
+
+
+
+<br><br><br><br>
+
+<!-- Modals-->
+<!-- Button trigger modal -->
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <button type="button" class="btn myprimary material2 font-weight-bold" data-toggle="modal" data-target="#inseriscivendita" style=" margin-left: 1%;">Inserisci Vendita</button>
+    <a href="/myaccount"><button type="button" class="btn myprimary material2 font-weight-bold" style=" margin-left: 24%;">Il Mio Profilo</button></a>    
+  </div>
+</div>
+      
+<!-- Modal -->
+<div class="modal fade left" id="inseriscivendita" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true" data-backdrop='false'>
+    <div class="modal-dialog modal-lg modal-side modal-top-left" role="document">
+      <div style="border-radius: 15px;" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalPreviewLabel">Inserisci Articolo Vendita</h5>
+        </div>
+        <div class="modal-body">
+          <form action="/inserisci" method="POST">
+              <div class="md-form md-outline form-row">
+                  <input type="text" id="nome" name="nome" class="form-control">
+                  <label for="nome">Nome Prodotto</label>
+              </div>
+              <div class="md-form md-outline">
+                  <textarea id="descrizione" name="descrizione" class="md-textarea form-control" rows="3"></textarea>
+                  <label for="descrizione">Descrizione</label>
+              </div>
+              <label class="mdb-main-label"> Categoria</label>
+              <select class="browser-default custom-select" id="categoria" name="categoria" runat="server">
+                  <option value="Tecnologia">Tecnologia</option>
+                  <option value="Casa">Casa</option>
+                  <option value="Abbigliamento">Abbigliamento</option>
+                  <option value="Fitness">Fitness</option>
+                  <option value="Auto">Auto</option>
+              </select>
+              <div class="md-form md-outline">
+                  <input type="number" class="form-control"  id="quantita" name="quantita" min="5" max="1000"  placeholder="Quantità per la vendità">
+                  </input>
+              </div>
+              <div class="md-form md-outline">
+                  <input type="number" id="prezzo" class="form-control" name="prezzo" min="5" max="30000"  placeholder="Prezzo in euro">
+                  </input>
+              </div>
+              <div class="md-form md-outline form-row">
+                  <input type="text" id="img" name="img" class="form-control">
+                  <label for="nome">Immagine</label>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn material3" data-dismiss="modal">Close</button>
+          <button type="submit" value="submit" class="btn material2">Insert</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+
+<!--------------------- CARD-------------------------->
+<!-- Card group -->
+<div class="container">
+{% if rows %}
+    <div class="row">
+{% for row in rows %} 
+<div class="col-xs-12 col-md-6 col-lg-4 ">
+    <!-- Card -->
+    <div class="card" style="margin: 1px; margin-bottom: 10px; border-radius: 25px;">
+      <!-- Card image --> 
+      <div class="view overlay">
+        <img class="card-img-top" src="{{row['img']}}" style="border-radius: 25px;">
+        <a href="/users/{{row['proprietario']}}">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!-- Card content -->
+      <div class="card-body">
+        <!-- Title -->
+        <h4 class="card-title">{{row["prodotto"]}}<br></h4>
+        <!-- Seller -->
+        <h5 class="card-text">Seller: <a href="/users/{{row['proprietario']}}">{{row["proprietario"]}}</a> </h5>
+        <!-- Prezzo -->
+        <p class="card-title card-text activator waves-effect waves-light"><i class="fas fa-euro-sign"> {{row["prezzo"]}}</i>
+        <hr>
+        <!-- Descrizione -->
+        <p class="card-text">{{row["descrizione"]}}</p>
+        <!-- Prenotazioni-->
+        <h3 class="card-text"><i class="fas fa-user-check"> </i> Prenotazioni: {{row["prenotazioni"]}}/{{row["quantita"]}}</p>
+        <!-- Bottone Per prenotarsi -->
+        <a href="/join/{{row['prodotto']}}"><button type="button" class="btn material2 btn-md"><i class="fas fa-check"></i> Join This</button></a>
+        <a href="/remove/{{row['prodotto']}}"><button type="button" class="btn material3 btn-md" style="position: absolute; right: 6%;"><i class="fas fa-times"></i> Left This</button></a>
+      </div>
+      <!-- Card content -->
+    </div>
+    <!-- Card -->
+  </div>
+  {% endfor %} 
+  <!-- Card group -->
+  </div>
+{% else %} 
+<br><br>
+<h1 style=" margin-left: 25%;">Nessun Articolo disponibile sorry...</h1>
+{% endif %}
+</div>
+  
+<script>
+  // Material Select Initialization
+  $(document).ready(function() {
+  $('.mdb-select').materialSelect();
+  });
+</script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/js/mdb.min.js"></script>
+</body>
+</html>

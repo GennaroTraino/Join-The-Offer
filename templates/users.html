@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Join The Offer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href='style.css'>
+    <script src='main.js'></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+         
+</head>
+<body>
+  <style>
+    /* Button Style Material 2.0 */
+    .material2 {border-radius: 25px; background-color: #73103C; color: #eee}
+    /* On mouse-over */
+    .material2:hover {background: #eee;}
+
+    /* Button Style 2 Material 2.0 */
+    .material3 {border-radius: 25px; background-color: rgb(9, 134, 76); color: #eee}
+    /* On mouse-over */
+    .material3:hover {background: #eee;} 
+  </style>
+<!--Main Navigation-->
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" style="background-color: #73103C"> <!-- Puoi cambiare con classe pink-->
+      <a class="navbar-brand" href="#"><strong>Join The Offer</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-eye"></i>Categorie
+            </a>
+            <div class="dropdown-menu dropdown-info" role="button" aria-labelledby="navbarDropdown" style="margin-left: 7%">
+                <a class="dropdown-item" href="/tecnologia">Tecnologia</a>
+                <a class="dropdown-item" href="/casa">Casa</a>
+                <a class="dropdown-item" href="/fitness">Fitness</a>
+                <a class="dropdown-item" href="/abbigliamento">Abbigliamento</a>
+                <a class="dropdown-item" href="/auto">Auto</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Secondo i miei interessi</a>
+            </div>                
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+    <!--Searchbar-->
+  <!-- Collapsible content -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!-- Search form -->
+    <form style="margin-left: 25%" class="form-inline mr-auto">
+      <div class="md-form my-0 form-sm md-outline">
+        <!-- Search form -->
+        <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search"> 
+        <button class="btn btn-sm" type="submit" style="border-radius: 25px;" ><i class="fas fa-search" style="color:#eee;"></i></button>
+      </div>
+    </form>
+</div>
+<!-- Collapsible content -->
+    <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+            <a href="/myaccount" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a id="insta" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"><i class="fas fa-user"></i>
+              {{ username }}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                <a class="dropdown-item" href="/myaccount">My account</a>
+                <a class="dropdown-item" href="/logout">Log out</a>
+            </div>
+        </li>
+    </ul>
+</div>
+</nav>
+</header>
+<!--Main Navigation-->
+
+<br><br><br><br>
+<h1 class="font-weight-bold" style="text-align: right">{{username|capitalize}}</h1>
+
+
+<!-- Classic tabs -->
+<div class="classic-tabs mx-2" style="border-radius: 15px; background-color: #73103C">
+        <ul class="nav nav-tabs nav-justified md-tabs " id="myClassicTabOrange" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link btn btn-white waves-light font-weight-bold" id="profile-tab-classic-orange" data-toggle="tab" href="#primo" style="color: #7e1414; border-radius: 25px;"
+              role="tab" aria-controls="primo" aria-selected="true">Selling Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-white waves-light font-weight-bold" id="follow-tab-classic-orange" data-toggle="tab" href="#secondo" style="color: #7e1414; border-radius: 25px;" 
+              role="tab" aria-controls="secondo" aria-selected="false">Joined Items</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link btn btn-white waves-light font-weight-bold" id="follow-tab-classic-orange" data-toggle="tab" href="#terzo" style="color: #7e1414; border-radius: 25px;" 
+                  role="tab" aria-controls="terzo" aria-selected="false">Send an Email</a>
+          </li>
+        </ul>
+<div class="tab-content card" id="myClassicTabContent">
+<div class="tab-pane fade active show " id="primo" role="tabpanel" aria-labelledby="profile-tab-classic-orange" style="margin-left: 2%; margin-right: 2%;">
+<!-- CONTENUTO PRIMO-->
+<br>
+<h1 class="font-weight-bold" style="margin-left: 2%;">Articoli Messi in Vendita</h1>
+<br>
+{% if rows%}
+<!--------------------- CARD-------------------------->
+<!-- Card group -->
+    <div class="container">
+        <div class="row">
+    {% for row in rows %} 
+    <div class="col-xs-12 col-md-6 col-lg-4 ">
+        <!-- Card -->
+        <div class="card" style="margin: 1px; margin-bottom: 10px; border-radius: 25px;">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img class="card-img-top" src="{{row['img']}}" alt="Card image cap">
+            <a href="/users/{{row['proprietario']}}">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title">{{row["prodotto"]}}<br></h4>
+            <!-- Seller -->
+            <h5 class="card-text">Seller: <a href="/users/{{row['proprietario']}}">{{row["proprietario"]}} </a> </h5>
+            <!-- Prezzo -->
+            <p class="card-title card-text activator waves-effect waves-light"><i class="fas fa-euro-sign"> {{row["prezzo"]}}</i>
+            <hr>
+            <!-- Descrizione -->
+            <p class="card-text">{{row["descrizione"]}}</p>
+            <!-- Prenotazioni-->
+            <h3 class="card-text"><i class="fas fa-user-check"> </i> Prenotazioni: {{row["prenotazioni"]}}/{{row["quantita"]}}</p>
+            <!-- Bottone Per prenotarsi -->
+            <a href="/join/{{row['prodotto']}}"><button type="button" class="btn material2 btn-md"><i class="fas fa-check"></i> Join This</button></a>
+            <a href="/remove/{{row['prodotto']}}"></a><button type="button" class="btn material3 btn-md" style="position: absolute; right: 6%;"><i class="fas fa-times"></i> Left This</button></a>
+          </div>
+          <!-- Card content -->
+        </div>
+        <!-- Card -->
+      </div>
+      {% endfor %} 
+      <!-- Card group -->
+      </div>
+    </div>
+    {% else %}
+    <h3>Non hai articoli</h3>
+{% endif %}
+</div>
+
+
+<!-- Parte 2-->
+<div class="tab-pane fade" id="secondo" role="tabpanel" aria-labelledby="follow-tab-classic-orange" style="margin-left: 2%; margin-right: 2%;">
+<!-- CONTENUTO SECONDO-->
+<br>
+<h1 class="font-weight-bold" style="margin-left: 2%;">Articoli Join</h1>
+<br>
+
+{% if rowsjoin%}
+<!--------------------- CARD-------------------------->
+<!-- Card group -->
+    <div class="container">
+        <div class="row">
+    {% for rowj in rowsjoin %} 
+    <div class="col-xs-12 col-md-6 col-lg-4 ">
+        <!-- Card -->
+        <div class="card" style="margin: 1px; margin-bottom: 10px; border-radius: 25px;">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img class="card-img-top" src="{{rowj['img']}}" alt="Card image cap">
+            <a href="/product/{{rowj['prodotto']}}">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title">{{rowj["prodotto"]}}<br></h4>
+            <!-- Seller -->
+            <h5 class="card-text">Seller: <a href="/users/{{rowj['proprietario']}}">{{rowj["proprietario"]}} </a> </h5>
+            <!-- Prezzo -->
+            <p class="card-title card-text activator waves-effect waves-light"><i class="fas fa-euro-sign"> {{rowj["prezzo"]}}</i>
+            <hr>
+            <!-- Descrizione -->
+            <p class="card-text">{{rowj["descrizione"]}}</p>
+            <!-- Prenotazioni-->
+            <h3 class="card-text"><i class="fas fa-user-check"> </i> Prenotazioni: {{rowj["prenotazioni"]}}/{{rowj["quantita"]}}</p>
+            <!-- Bottone Per prenotarsi -->
+            <button type="button" class="btn material2 btn-md"><i class="fas fa-check"></i> Join This</button>
+            <button type="button" class="btn material3 btn-md" style="position: absolute; right: 6%;"><i class="fas fa-times"></i> Left This</button>
+          </div>
+          <!-- Card content -->
+        </div>
+        <!-- Card -->
+      </div>
+      {% endfor %} 
+      <!-- Card group -->
+      </div>
+    </div>
+    {% else %}
+<h3>Non hai articoli</h3>
+{% endif %}
+</div>
+
+
+<!-- Parte Terzo-->
+<div class="tab-pane fade" id="terzo" role="tabpanel" aria-labelledby="follow-tab-classic-orange" style="margin-left: 2%; margin-right: 2%;">
+    <!-- CONTENUTO TERZO-->
+<section class="my-5 ">
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold text-center my-5">Contatta {{username}}</h2>
+  <!-- Section description -->
+  <p class="text-center w-responsive mx-auto pb-5">Scrivi una mail a {{username}} per avere chiarimenti su uno dei suoi 
+      articoli in vendita o per comunicare qualcosa
+  </p>
+
+  <!-- Grid row -->
+  <div class="row">
+    <!-- Grid column -->
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <!-- Form with header -->
+      <div class="card">
+        <form class="card-body" action="/infomail/{{username}}">
+          <!-- Header -->
+            <h3><i class="fas fa-envelope"></i> Componi la tua mail:</h3>
+          <p class="dark-grey-text">La tua email sarà inviata subito. Tutti i campi obbligatori</p>
+          <!-- Body -->
+          <div class="md-form">
+            <i class="fas fa-user prefix grey-text"></i>
+            <input type="text" id="form-name" name="form-name" class="form-control">
+            <label for="form-name">Your name</label>
+          </div>
+          <div class="md-form">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <input type="text" id="form-email" name="form-email" class="form-control">
+            <label for="form-email">Your email</label>
+          </div>
+          <div class="md-form">
+            <i class="fas fa-tag prefix grey-text"></i>
+            <input type="text" id="form-subject" name="form-subject" class="form-control">
+            <label for="form-Subject">Subject</label>
+          </div>
+          <div class="md-form">
+            <i class="fas fa-pencil-alt prefix grey-text"></i>
+            <textarea id="form-text" name="form-text" class="form-control md-textarea" rows="3"></textarea>
+            <label for="form-text">Send message</label>
+          </div>
+          <div class="text-center">
+            <button type="submit" value="submit" class="btn material2">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- Form with header -->
+    </div>
+    <div class="col-md-4"></div>
+    <!-- Grid column -->
+</div>
+<!-- Grid column -->
+</div>
+<!-- Grid row -->
+</section>
+<!-- Section: Contact v.1 -->
+        
+
+</div>
+</div>
+      <!-- Classic tabs -->
+
+
+
+
+
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/js/mdb.min.js"></script>
+</body>
+</html>
